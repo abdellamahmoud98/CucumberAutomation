@@ -25,8 +25,8 @@ public class StrongPasswordSteps {
     }
 
     private boolean validateStrongPassword() {
-        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$";
-        boolean isStrong = Pattern.matches(passwordRegex, this.password);
+    	String passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
+    	boolean isStrong = Pattern.matches(passwordRegex, this.password);
         return isStrong;
     }
 }
